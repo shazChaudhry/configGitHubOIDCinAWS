@@ -35,9 +35,9 @@ module "iam-assumable-role-with-oidc" {
   oidc_fully_qualified_audiences = ["sts.amazonaws.com"]
   # GitHub workflow would be run from all repos within this organization
   # as no specific repo is splied
-  oidc_subjects_with_wildcards   = ["repo:Organization/*"]
+  oidc_subjects_with_wildcards   = ["repo:shazChaudhry/*"]
   create_role                    = true
-  role_name                      = "role-with-oidc"
+  role_name                      = "role-with-github-oidc"
   role_policy_arns = [
     "arn:aws:iam::aws:policy/AdministratorAccess",
   ]
