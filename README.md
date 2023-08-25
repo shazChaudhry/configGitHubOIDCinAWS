@@ -6,7 +6,7 @@ The following is going to be created in AWS
 - Region is set to be eu-west-2 (London). Change the variable for a different region
 - An IAM identity provider for GitHub OIDC
 - An IAM role which can be assumed by trusted resources using OpenID Connect Federated Users. Update the terraform configuration in main.tf for your list of GitHub repos 
-- A bucket where GH actions will save terraform states for a given environment like dev
+- An S3 bucket where GH actions will save terraform states for a given environment like dev
 - A DynamoDB table that is to be used for locking TF runs for a given environment; S3 backend
 
 ### Create infra
