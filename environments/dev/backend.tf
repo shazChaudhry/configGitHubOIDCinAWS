@@ -1,1 +1,1 @@
-path = "statefiles/dev.tfstate"
+key = "githuboidc/dev.tfstate"
