@@ -30,13 +30,13 @@ terraform {
 # Craete OIDC provider in AWS account. There can be only one per account
 module "iam-github-oidc-provider" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-github-oidc-provider"
-  version = "~> 5.39"
+  version = "~> 6.1"
 }
 
 # Attach permissions to the OIDC provider and specify OIDC subjects
 module "iam-assumable-role-with-oidc" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
-  version = "~> 5.39"
+  version = "~> 6.1"
 
   provider_url                   = module.iam-github-oidc-provider.url
   oidc_fully_qualified_audiences = ["sts.amazonaws.com"]
